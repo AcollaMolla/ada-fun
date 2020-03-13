@@ -10,6 +10,7 @@ begin
    Put_Line("(2)Try for-loops");
    Put_Line("(3)Try reverse for-loops");
    Put_Line("(4)Try bare loops");
+   Put_Line("(5)Try while loops");
    Put("Make you'r choice: ");
    Get(VAL);
    case VAL is
@@ -35,6 +36,12 @@ begin
          loop
             Put_Line("Hello world!" & Integer'Image(K));
             exit when K = 5;
+            K := K + 1;
+         end loop;
+      when 5 =>
+         K := 0;
+         while K <= 5 loop
+            Put_Line("Hello world" & Integer'Image(K));
             K := K + 1;
          end loop;
       when others =>
