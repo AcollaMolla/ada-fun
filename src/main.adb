@@ -13,4 +13,11 @@ begin
       Put(N);
       Put_Line(" is a negative number");
    end if;
+
+   for I in 1..5 loop
+      Put_Line("Hello world!" & Integer'Image(I));
+   end loop;
+   for I in reverse 1..5 loop
+      Put_Line("Hello world!" & Integer'Image(I));
+   end loop;
 end Main;
