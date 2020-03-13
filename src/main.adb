@@ -5,12 +5,17 @@ procedure Main is
    N : Integer;
    K : Integer := 1;
    VAL : Integer;
+   procedure Nested is
+   begin
+      Put_Line("Hello from procedure Nested");
+   end Nested;
 begin
    Put_Line("(1)Try if-statement");
    Put_Line("(2)Try for-loops");
    Put_Line("(3)Try reverse for-loops");
    Put_Line("(4)Try bare loops");
    Put_Line("(5)Try while loops");
+   Put_Line("(6)Try nested procedure");
    Put("Make you'r choice: ");
    Get(VAL);
    case VAL is
@@ -44,6 +49,8 @@ begin
             Put_Line("Hello world" & Integer'Image(K));
             K := K + 1;
          end loop;
+      when 6 =>
+         Nested;
       when others =>
          Put_Line("None chosen");
    end case;
